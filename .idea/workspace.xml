@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Students And Their Certificate Management System By Hibernate ORM Tool" />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Students And Their Certificate Management System By Hibernate ORM Tool">
+      <change afterPath="$PROJECT_DIR$/GameRunner/src/main/java/org/learnspringframework/gamerunner/Game/GameRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameRunner/src/main/java/org/learnspringframework/gamerunner/Game/Mario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameRunner/src/main/java/org/learnspringframework/gamerunner/Game/SuperContra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameRunner/src/main/java/org/learnspringframework/gamerunner/GameRunnerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameRunner/src/main/java/org/learnspringframework/gamerunner/GameRunnerApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -38,10 +52,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.GameRunnerApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -49,6 +69,7 @@
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/hp/OneDrive/Documents/GitHub/SpringBoot-Learning/Student and Certificate Management System",
+    "node.js.selected.package.tslint": "(autodetect)",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   },
@@ -62,6 +83,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hp\OneDrive\Documents\GitHub\SpringBoot-Learning\Student and Certificate Management System" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.learnspringframework.gamerunner.Game" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
