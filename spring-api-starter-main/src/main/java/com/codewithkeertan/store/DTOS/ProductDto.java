@@ -4,10 +4,14 @@ import com.codewithkeertan.store.entities.Category;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @Getter
-public class UserDto {
-    private Long id;
+public class ProductDto {
     private String name;
-    private String email;
+    private String Description;
+    private BigDecimal price;
+    private Category category;
+
 }

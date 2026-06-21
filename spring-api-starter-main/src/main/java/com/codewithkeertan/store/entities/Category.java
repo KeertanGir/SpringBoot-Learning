@@ -1,5 +1,6 @@
 package com.codewithkeertan.store.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ public class Category {
 
     @Column(name = "name")
     private String name;
+
 
     @OneToMany(mappedBy = "category")
     private Set<Product> products = new HashSet<>();
