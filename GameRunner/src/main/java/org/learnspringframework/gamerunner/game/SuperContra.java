@@ -1,6 +1,9 @@
-package org.learnspringframework.gamerunner.Game;
+package org.learnspringframework.gamerunner.game;
 
-public class SuperContra implements GammingConsole {
+import org.springframework.stereotype.Component;
+
+@Component
+public class SuperContra implements GamingConsole {
 
     @Override
     public void up(){

@@ -1,6 +1,10 @@
-package org.learnspringframework.gamerunner.Game;
+package org.learnspringframework.gamerunner.game;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 // tight Coupled
+@Component
 public class GameRunner {
 
 //    Tight Coupling
@@ -10,8 +14,10 @@ public class GameRunner {
 //    }
 
 //    Loose Coupling
-    private GammingConsole game;
-    public GameRunner(GammingConsole game){
+
+//    @Autowired
+    private GamingConsole game;
+    public GameRunner(@Qualifier(value = "pacMan") GamingConsole game){
         this.game = game;
     }
 

@@ -1,6 +1,9 @@
-package org.learnspringframework.gamerunner.Game;
+package org.learnspringframework.gamerunner.game;
 
-public class PacMan implements GammingConsole{
+import org.springframework.stereotype.Component;
+
+@Component
+public class PacMan implements GamingConsole {
 
 
     @Override

@@ -1,6 +1,11 @@
-package org.learnspringframework.gamerunner.Game;
+package org.learnspringframework.gamerunner.game;
 
-public class Mario implements GammingConsole{
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
+public class Mario implements GamingConsole {
     @Override
     public void up(){
         System.out.println("Jump");
