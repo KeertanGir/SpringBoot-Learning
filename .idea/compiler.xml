@@ -10,12 +10,14 @@
         <module name="GameRunner" />
         <module name="HibernateCURD" />
         <module name="store" />
+        <module name="springbootapplication" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="GameRunner" options="-parameters" />
+      <module name="springbootapplication" options="-parameters" />
       <module name="store" options="-parameters" />
     </option>
   </component>
