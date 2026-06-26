@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="i changed the PersonService">
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work">
+      <change afterPath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/Data/Persons.java" beforeDir="false" afterPath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/Data/Persons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/controller/MarksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/controller/MarksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/service/PersonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,44 +49,45 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.SpringbootapplicationApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GameRunnerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.SpringbootapplicationApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/OneDrive/Documents/GitHub/SpringBoot-Learning/Student and Certificate Management System&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SpringbootapplicationApplication.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.GameRunnerApplication.executor": "Run",
+    "Spring Boot.SpringbootapplicationApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/JavaSpringBoot/SpringBoot-Learning/springbootapplication/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaSpringBoot\SpringBoot-Learning\springbootapplication\src\main\resources" />
       <recent name="C:\Users\hp\OneDrive\Documents\GitHub\SpringBoot-Learning\Student and Certificate Management System" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -108,6 +108,7 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="GameRunnerApplication" value="STOPPED" />
               <entry key="SpringbootapplicationApplication" value="STOPPED" />
             </map>
           </value>
@@ -115,7 +116,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GameRunnerApplication">
+  <component name="RunManager" selected="Spring Boot.SpringbootapplicationApplication">
     <configuration name="GameRunnerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="GameRunner" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.learnspringframework.gamerunner.GameRunnerApplication" />
@@ -143,7 +144,8 @@
       <workItem from="1782126122214" duration="7124000" />
       <workItem from="1782153489415" duration="2969000" />
       <workItem from="1782217151794" duration="6176000" />
-      <workItem from="1782241108638" duration="1478000" />
+      <workItem from="1782241108638" duration="2394000" />
+      <workItem from="1782491515775" duration="717000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -201,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782223650364</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work">
+      <option name="closed" value="true" />
+      <created>1782244728866</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1782244728867</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +225,7 @@
     <MESSAGE value="Learn Dependancy Injection, Setter, Constructor and Field" />
     <MESSAGE value="Started SpringBoot and Make A Little Web Service for the Starting The REST API Development" />
     <MESSAGE value="i changed the PersonService" />
-    <option name="LAST_COMMIT_MESSAGE" value="i changed the PersonService" />
+    <MESSAGE value="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work" />
   </component>
 </project>
