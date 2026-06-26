@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work">
-      <change afterPath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-prod.properties" afterDir="false" />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Today I Learn About How A Springboot application have multiple Properties In an Application. To do multiple Configuration for Multiple enviroments">
+      <change afterPath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/Configurations/CurrencyConfigurationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springbootapplication/src/main/java/org/learnspringframework/springbootapplication/controller/CurrencyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +92,7 @@
       <recent name="C:\Users\hp\OneDrive\Documents\GitHub\SpringBoot-Learning\Student and Certificate Management System" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.learnspringframework.springbootapplication.controller" />
       <recent name="org.learnspringframework.gamerunner.Game" />
     </key>
   </component>
@@ -145,7 +147,7 @@
       <workItem from="1782153489415" duration="2969000" />
       <workItem from="1782217151794" duration="6176000" />
       <workItem from="1782241108638" duration="2394000" />
-      <workItem from="1782491515775" duration="717000" />
+      <workItem from="1782491515775" duration="1612000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -211,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782244728867</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Today I Learn About How A Springboot application have multiple Properties In an Application. To do multiple Configuration for Multiple enviroments">
+      <option name="closed" value="true" />
+      <created>1782492307615</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1782492307616</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +236,7 @@
     <MESSAGE value="Started SpringBoot and Make A Little Web Service for the Starting The REST API Development" />
     <MESSAGE value="i changed the PersonService" />
     <MESSAGE value="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work" />
+    <MESSAGE value="Today I Learn About How A Springboot application have multiple Properties In an Application. To do multiple Configuration for Multiple enviroments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Today I Learn About How A Springboot application have multiple Properties In an Application. To do multiple Configuration for Multiple enviroments" />
   </component>
 </project>
