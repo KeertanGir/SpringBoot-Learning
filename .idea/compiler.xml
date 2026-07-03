@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="GameRunner" />
+        <module name="JobBoard" />
         <module name="HibernateCURD" />
         <module name="store" />
         <module name="springbootapplication" />
@@ -18,6 +19,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="GameRunner" options="-parameters" />
+      <module name="JobBoard" options="-parameters" />
       <module name="restfull-web-services" options="-parameters" />
       <module name="springbootapplication" options="-parameters" />
       <module name="store" options="-parameters" />
