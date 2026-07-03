@@ -45,7 +45,7 @@ public class UserDaoService {
 //        return new User(0, "Not Found", LocalDate.MIN);
 
         Predicate<? super User> predicate = user -> user.getId() == id;
-        return users.stream().filter(predicate).findFirst().get();
+        return users.stream().filter(predicate).findFirst().orElse(null);
     }
 
     public User save(User user){
