@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Add a New Funtionality that Can enable search from High to low salary">
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Add @CrossOrigin For allowing React application for our website">
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CustomizeResponseEntityExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/ErrorDetailsPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/InvalidJobDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/JobNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/JobsPostingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/JobsPostingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/storage/JobStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/storage/JobStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -48,50 +55,50 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.SpringbootapplicationApplication.executor": "Run",
-    "Maven.springbootapplication [clean].executor": "Run",
-    "Maven.springbootapplication [package].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.Application.executor": "Run",
-    "Spring Boot.GameRunnerApplication.executor": "Run",
-    "Spring Boot.JobBoardApplication.executor": "Run",
-    "Spring Boot.RestfullWebServicesApplication.executor": "Run",
-    "Spring Boot.SpringbootapplicationApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/JavaSpringBoot/SpringBoot-Learning/springbootapplication/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.SpringbootapplicationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.springbootapplication [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.springbootapplication [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GameRunnerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.JobBoardApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RestfullWebServicesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SpringbootapplicationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/JavaSpringBoot/SpringBoot-Learning/springbootapplication/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.learnspringframework.restfullwebservices.Exceptions" />
@@ -120,10 +127,11 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="Application" value="FAILED" />
               <entry key="GameRunnerApplication" value="STOPPED" />
               <entry key="JobBoardApplication" value="STOPPED" />
               <entry key="RestfullWebServicesApplication" value="STOPPED" />
-              <entry key="SpringbootapplicationApplication" value="STOPPED" />
+              <entry key="SpringbootapplicationApplication" value="FAILED" />
             </map>
           </value>
         </entry>
@@ -182,7 +190,8 @@
       <workItem from="1782625992029" duration="2062000" />
       <workItem from="1783018737057" duration="2605000" />
       <workItem from="1783067253264" duration="6397000" />
-      <workItem from="1783082474202" duration="14553000" />
+      <workItem from="1783082474202" duration="15303000" />
+      <workItem from="1783161200399" duration="16535000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -328,11 +337,30 @@
       <option name="project" value="LOCAL" />
       <updated>1783096929431</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add @CrossOrigin For allowing React application for our website">
+      <option name="closed" value="true" />
+      <created>1783098030785</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1783098030785</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Students And Their Certificate Management System By Hibernate ORM Tool" />
@@ -353,6 +381,7 @@
     <MESSAGE value="Perform Exception Handling on the Rest Endpoints" />
     <MESSAGE value="Start a Backend Project named Job Boards shows The jobs and Take Respons- Started only 2 things Jobs Can be Showed and Added New Jobs also. But now its On only inMemory database. Using ArrayList" />
     <MESSAGE value="Add a New Funtionality that Can enable search from High to low salary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a New Funtionality that Can enable search from High to low salary" />
+    <MESSAGE value="Add @CrossOrigin For allowing React application for our website" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add @CrossOrigin For allowing React application for our website" />
   </component>
 </project>

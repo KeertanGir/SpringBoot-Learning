@@ -74,6 +74,12 @@ public class JobStorage {
         return job;
     }
 
+    public static JobsPostings updateJob(long id, JobsPostings jobsPostings) {
+        JobsPostings jobsPostings1 = job.stream().filter(job -> job.getId().equals(id)).findFirst().get();
+        job.add(job.indexOf(jobsPostings1), jobsPostings);
+        return job.get(job.indexOf(jobsPostings1));
+    }
+
 
     public JobsPostings save(JobsPostings newJob) {
         newJob.setId(++idjob);
@@ -83,5 +89,9 @@ public class JobStorage {
 
     public Optional<JobsPostings> getById(Long id) {
         return job.stream().filter(jobs -> jobs.getId().equals(id)).findFirst();
+    }
+
+    public void delete(JobsPostings jobsPosting) {
+        job.remove(jobsPosting);
     }
 }
