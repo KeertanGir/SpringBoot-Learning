@@ -21,16 +21,19 @@ public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExcep
 
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<ErrorDetails> handleAllException(Exception ex, WebRequest request) throws Exception {
-        ErrorDetails errorDetails = new ErrorDetails(LocalDate.now(), ex.getMessage(), request.getDescription(false));
-
+       ErrorDetails errorDetails = new ErrorDetails(LocalDate.now(), ex.toString() + ex.getCause().toString(), request.getDescription(false));
        return new ResponseEntity<ErrorDetails>( errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler({UserNotFoundException.class, NullPointerException.class})
-    public final ResponseEntity<ErrorDetails> handleUserNotFoundExceptionException(Exception ex, WebRequest request) throws Exception {
+    public final ResponseEntity<ErrorDetails> handleUserNotFoundException(Exception ex, WebRequest request) throws Exception {
         ErrorDetails errorDetails = new ErrorDetails(LocalDate.now(), ex.getMessage(), request.getDescription(false));
-
         return new ResponseEntity<ErrorDetails>( errorDetails, HttpStatus.NOT_FOUND);
+    }
+
+    public final ResponseEntity<ErrorDetails> handlePostNotFoundException(Exception ex, WebRequest request) throws Exception{
+        ErrorDetails errorDetails = new ErrorDetails(LocalDate.now(), ex.getMessage(), request.getDescription(false));
+        return new ResponseEntity<ErrorDetails>(errorDetails, HttpStatus.NOT_FOUND);
     }
 
     @Override
@@ -38,7 +41,6 @@ public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExcep
             MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
             ErrorDetails errorDetails = new ErrorDetails(LocalDate.now(), /*ex.getMessage()*/ " Total Errors :===>>  "+ ex.getErrorCount() + ": First Error :--> " + ex.getFieldError().getDefaultMessage() ,
                     request.getDescription(false));
-
             return new ResponseEntity(errorDetails, HttpStatus.BAD_REQUEST);
     }
 

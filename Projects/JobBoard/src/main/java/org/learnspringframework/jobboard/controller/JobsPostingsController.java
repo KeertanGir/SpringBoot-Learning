@@ -10,6 +10,8 @@ import org.learnspringframework.jobboard.Data.JobsPostings;
 import org.learnspringframework.jobboard.dtos.JobRequestDto;
 import org.learnspringframework.jobboard.dtos.JobResponseDTO;
 import org.learnspringframework.jobboard.service.JobService;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 
 @CrossOrigin(origins = "http://localhost:5173")
@@ -132,8 +136,15 @@ public class JobsPostingsController {
 //      GET    /api/jobs/{id}             → return a single job by id
     @Operation(summary = "Retrive data", description = "Get Job by jobId")
     @GetMapping("/{id}")
-    public ResponseEntity<JobResponseDTO> getJobById(@PathVariable Long id){
-      return  ResponseEntity.ok(jobService.getById(id));
+    public ResponseEntity<EntityModel<JobResponseDTO >> getJobById(@PathVariable Long id){
+        JobResponseDTO byId = jobService.getById(id);
+
+        EntityModel<JobResponseDTO> entityModel = EntityModel.of(byId);
+        WebMvcLinkBuilder linkBuilder = WebMvcLinkBuilder.linkTo(methodOn(this.getClass())
+                .getJobs("", "", "", ""));
+        entityModel.add(linkBuilder.withRel("all-users"));
+
+        return  ResponseEntity.ok(entityModel);
     }
 
 //    GET    /api/jobs?location=Karachi → filter jobs by location
