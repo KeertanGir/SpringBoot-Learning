@@ -32,7 +32,7 @@ public class JobRequestDto {
     @Size(min = 2, message = "Job Type length Should be Greater Than 2")
     private String jobType;
 
-    //    @NotBlank(message = "Posted Date Is Required")
+//    @NotBlank(message = "Posted Date Is Required") -- is wjah se error aaye gha Yeh sirf Strings per use hota hy
     @PastOrPresent(message = "Posting date Cannot be The Future date Please add Past Or Present Date In this Field")
     private LocalDate postedDate;
 

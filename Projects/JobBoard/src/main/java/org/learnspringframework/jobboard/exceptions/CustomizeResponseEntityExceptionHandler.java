@@ -3,6 +3,7 @@ package org.learnspringframework.jobboard.exceptions;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -46,6 +47,13 @@ public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExcep
         ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.CONTINUE.value(), ex.getMessage(), LocalDate.now(), request.getDescription(false));
         logger.info("Skill Already Exists -- Exception : "+ ex);
         return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo,HttpStatus.CONFLICT);
+    }
+
+    @ExceptionHandler(value = CompanyNotFoundException.class)
+    public final ResponseEntity<ErrorDetailsPojo> handleCompanyNotFound(Exception ex, WebRequest request) throws  Exception{
+        ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.NOT_FOUND.value(),ex.getMessage(), LocalDate.now(), request.getDescription(false));
+        logger.info("CompanyNotFoundException id for :  " +ex);
+        return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo, HttpStatus.NOT_FOUND);
     }
 
 

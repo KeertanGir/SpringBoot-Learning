@@ -105,3 +105,37 @@ VALUES
     ('Hibernate'),
     ('Git'),
     ('Docker');
+
+
+INSERT INTO companies (name, description, company_site)
+VALUES
+    (
+        'Systems Limited',
+        'A technology and business solutions company providing digital transformation, cloud, data, enterprise applications and business process outsourcing services.',
+        'https://www.systemsltd.com'
+    ),
+    (
+        'NETSOL Technologies',
+        'An enterprise software company specializing in asset finance, leasing, digital retail, loan servicing and financial technology solutions.',
+        'https://www.netsoltech.com'
+    ),
+    (
+        '10Pearls',
+        'A software development and digital transformation company providing artificial intelligence, product development, cloud, cybersecurity and enterprise technology services.',
+        'https://10pearls.com'
+    ),
+    (
+        'Arbisoft',
+        'A software and product development company providing custom software development, web and mobile applications, data engineering, artificial intelligence and quality assurance services.',
+        'https://arbisoft.com'
+    ),
+    (
+        'Contour Software',
+        'A software services organization supporting international software businesses through software development, quality assurance, customer support and enterprise technology teams.',
+        'https://contour-software.com'
+    ),
+    (
+        'Devsinc',
+        'A software development company providing custom software, web development, user-interface design, DevOps, generative artificial intelligence and technology consulting services.',
+        'https://www.devsinc.com'
+    );

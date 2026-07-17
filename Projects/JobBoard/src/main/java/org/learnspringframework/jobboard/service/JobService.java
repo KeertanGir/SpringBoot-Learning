@@ -40,6 +40,7 @@ public class JobService {
             2026-07-07T21:06:34.078+05:00 TRACE 1696 --- [JobBoard] [nio-8080-exec-3] o.l.j.controller.JobsPostingsController  : Creating Log for job on TRACE Level
 //            * */
         JobsPostings newJob =  mapToEntity(newJobRequest);
+        validator(newJob);
         jobRepository.save(newJob);
         return newJob;
     }
@@ -161,6 +162,7 @@ public class JobService {
                 .orElseThrow(() -> new JobNotFoundException("Job is Not Found By id : " + id));
 
         JobsPostings newJob = mapToEntity(newJobRequest);
+        validator(newJob);
         jobRepository.save(newJob);
 
     }
