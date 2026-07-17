@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Add security for My Apis Using Spring Security">
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/CompanyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/CompanyRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/CompanyResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/enums/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CompanyNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/CompanyService.java" afterDir="false" />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api">
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationsRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/enums/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CustomizeResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CustomizeResponseEntityExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +35,8 @@
       <list>
         <option value="Exception" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -276,7 +268,7 @@
       <workItem from="1784210533653" duration="7690000" />
       <workItem from="1784226321954" duration="10097000" />
       <workItem from="1784287961426" duration="3718000" />
-      <workItem from="1784314012970" duration="911000" />
+      <workItem from="1784314012970" duration="6737000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -526,7 +518,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784136997164</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api">
+      <option name="closed" value="true" />
+      <created>1784315083174</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1784315083174</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="i changed the PersonService" />
     <MESSAGE value="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work" />
     <MESSAGE value="Today I Learn About How A Springboot application have multiple Properties In an Application. To do multiple Configuration for Multiple enviroments" />
     <MESSAGE value="I learn that How The Confuguration Class Manage the Multiple Complex Configuration in An SpringBoot application and How the cobination of Configuration class With The SpringFramework Is most Powerfull for the Complex Application Configuration" />
@@ -569,6 +568,7 @@
     <MESSAGE value="Added Post Methods To the users Posts and their end points" />
     <MESSAGE value="Make A New Entity and Performs All the Main things Like := Skill: Entity + DTOs + Repository + Service + Controller + exceptions" />
     <MESSAGE value="Add security for My Apis Using Spring Security" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add security for My Apis Using Spring Security" />
+    <MESSAGE value="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api" />
   </component>
 </project>

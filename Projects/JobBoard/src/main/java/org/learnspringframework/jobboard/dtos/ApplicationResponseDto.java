@@ -1,49 +1,25 @@
-package org.learnspringframework.jobboard.entities;
+package org.learnspringframework.jobboard.dtos;
 
-import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import org.learnspringframework.jobboard.entities.enums.Status;
 
 import java.time.LocalDateTime;
 
-@Entity
-public class Applications {
+public class ApplicationResponseDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "job_id",nullable = false)
     private Long job_id;
-
-    @Column(name = "candidate_id", nullable = false)
     private Long candidate_id;
-
-    @Column(nullable = false)
     private Status status;
-
-    @Column(nullable = false)
     private LocalDateTime appliedDate;
-
-    @Column(nullable = false)
     private String resumeUrl;
 
-    public Applications(Long job_id, Long candidate_id, Status status, LocalDateTime appliedDate, String resumeUrl) {
+    public ApplicationResponseDto(Long job_id, Long candidate_id, Status status, LocalDateTime appliedDate, String resumeUrl) {
         this.job_id = job_id;
         this.candidate_id = candidate_id;
         this.status = status;
         this.appliedDate = appliedDate;
         this.resumeUrl = resumeUrl;
-    }
-
-    public Applications() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Long getJob_id() {
@@ -70,11 +46,11 @@ public class Applications {
         this.status = status;
     }
 
-    public String getAppliedDate() {
+    public LocalDateTime getAppliedDate() {
         return appliedDate;
     }
 
-    public void setAppliedDate(String appliedDate) {
+    public void setAppliedDate(LocalDateTime appliedDate) {
         this.appliedDate = appliedDate;
     }
 

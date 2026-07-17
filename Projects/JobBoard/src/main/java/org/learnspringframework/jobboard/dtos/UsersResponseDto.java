@@ -1,0 +1,56 @@
+package org.learnspringframework.jobboard.dtos;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+import org.learnspringframework.jobboard.entities.enums.Role;
+
+import java.time.LocalDateTime;
+
+public class UsersResponseDto {
+
+    private String fullName;
+    private String email;
+    private Role role;
+    private LocalDateTime createdAt;
+
+    public UsersResponseDto(String fullName, String email, Role role, LocalDateTime createdAt) {
+        this.fullName = fullName;
+        this.email = email;
+        this.role = role;
+        this.createdAt = createdAt;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+}
