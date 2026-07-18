@@ -3,7 +3,6 @@ package org.learnspringframework.jobboard.exceptions;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -11,12 +10,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import java.time.LocalDate;
 
-@ControllerAdvice
+//@ControllerAdvice
+@RestControllerAdvice
 public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
     Logger logger =  LoggerFactory.getLogger(CustomizeResponseEntityExceptionHandler.class);
@@ -41,14 +42,6 @@ public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExcep
         return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo, HttpStatus.NOT_FOUND);
     }
 
-
-    @ExceptionHandler(value = DuplicateSkillException.class)
-    public final ResponseEntity<ErrorDetailsPojo> HandleDuplicateSkillException(Exception ex, WebRequest request) throws Exception{
-        ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.CONTINUE.value(), ex.getMessage(), LocalDate.now(), request.getDescription(false));
-        logger.info("Skill Already Exists -- Exception : "+ ex);
-        return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo,HttpStatus.CONFLICT);
-    }
-
     @ExceptionHandler(value = CompanyNotFoundException.class)
     public final ResponseEntity<ErrorDetailsPojo> handleCompanyNotFound(Exception ex, WebRequest request) throws  Exception{
         ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.NOT_FOUND.value(),ex.getMessage(), LocalDate.now(), request.getDescription(false));
@@ -56,6 +49,33 @@ public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExcep
         return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(ApplicationNotFoundException.class)
+    public final ResponseEntity<ErrorDetailsPojo> handleApplicationNotFoundException(Exception ex, WebRequest request) throws Exception {
+        ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.NOT_FOUND.value(), ex.getMessage(), LocalDate.now(), request.getDescription(false));
+        logger.info("ApplicationNotFoundException id for : "+ ex);
+        return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    public final ResponseEntity<ErrorDetailsPojo> handleUserNotFoundException(Exception ex, WebRequest request) throws Exception {
+        ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.NOT_FOUND.value(), ex.getMessage(), LocalDate.now(), request.getDescription(false));
+        logger.info("UserNotFoundException is for : " + ex);
+        return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(value = DuplicateSkillException.class)
+    public final ResponseEntity<ErrorDetailsPojo> handleDuplicateSkillException(Exception ex, WebRequest request) throws Exception{
+        ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.CONTINUE.value(), ex.getMessage(), LocalDate.now(), request.getDescription(false));
+        logger.info("Skill Already Exists -- Exception : "+ ex);
+        return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo,HttpStatus.CONFLICT);
+    }
+
+    @ExceptionHandler(value = DuplicateEmailException.class)
+    public final ResponseEntity<ErrorDetailsPojo> handleDuplicateEmailException(Exception ex, WebRequest request) throws Exception{
+        ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.CONFLICT.value(), ex.getMessage(), LocalDate.now(), request.getDescription(false));
+        logger.info("This Email is Already in Use Please Use Another Email + Exception : "+ ex);
+        return new ResponseEntity<ErrorDetailsPojo>(errorDetailsPojo, HttpStatus.CONFLICT);
+    }
 
     @ExceptionHandler(value = InvalidJobDataException.class)
     public final ResponseEntity<ErrorDetailsPojo> HandleInvalidJobDataException(Exception ex, WebRequest request) throws Exception{
@@ -69,7 +89,5 @@ public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExcep
             ErrorDetailsPojo errorDetailsPojo = new ErrorDetailsPojo(HttpStatus.METHOD_NOT_ALLOWED.value(), "Total Error : " +ex.getErrorCount() + " --> Error : "+ ex.getFieldError().getDefaultMessage(), LocalDate.now(), request.getDescription(false) );
     return new ResponseEntity(errorDetailsPojo, HttpStatus.METHOD_NOT_ALLOWED);
     }
-
-
 
 }

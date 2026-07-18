@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api">
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationsRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/enums/Status.java" afterDir="false" />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Create JobNotfound exceptions and ApplicationNotFoundException">
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/ApplicationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/ApplicationNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/DuplicateEmailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/ApplicationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/ApplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationsRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationsRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CustomizeResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CustomizeResponseEntityExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Exception" />
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -222,6 +229,9 @@
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="" />
@@ -268,7 +278,8 @@
       <workItem from="1784210533653" duration="7690000" />
       <workItem from="1784226321954" duration="10097000" />
       <workItem from="1784287961426" duration="3718000" />
-      <workItem from="1784314012970" duration="6737000" />
+      <workItem from="1784314012970" duration="10432000" />
+      <workItem from="1784386141902" duration="5958000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -526,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784315083174</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Completed Users and Application Entities and Theire Response and Request Dtos">
+      <option name="closed" value="true" />
+      <created>1784323299675</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1784323299675</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +563,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove Persons @Component Because Persons Model Doesn't need any @Component to perform there work" />
     <MESSAGE value="Today I Learn About How A Springboot application have multiple Properties In an Application. To do multiple Configuration for Multiple enviroments" />
     <MESSAGE value="I learn that How The Confuguration Class Manage the Multiple Complex Configuration in An SpringBoot application and How the cobination of Configuration class With The SpringFramework Is most Powerfull for the Complex Application Configuration" />
     <MESSAGE value="Check the Actuator for the Monitoring of the Spring boot Application" />
@@ -569,6 +587,7 @@
     <MESSAGE value="Make A New Entity and Performs All the Main things Like := Skill: Entity + DTOs + Repository + Service + Controller + exceptions" />
     <MESSAGE value="Add security for My Apis Using Spring Security" />
     <MESSAGE value="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api" />
+    <MESSAGE value="Completed Users and Application Entities and Theire Response and Request Dtos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Users and Application Entities and Theire Response and Request Dtos" />
   </component>
 </project>

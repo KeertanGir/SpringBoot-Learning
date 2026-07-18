@@ -70,11 +70,11 @@ public class Applications {
         this.status = status;
     }
 
-    public String getAppliedDate() {
+    public LocalDateTime getAppliedDate() {
         return appliedDate;
     }
 
-    public void setAppliedDate(String appliedDate) {
+    public void setAppliedDate(LocalDateTime appliedDate) {
         this.appliedDate = appliedDate;
     }
 

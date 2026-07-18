@@ -161,9 +161,16 @@ public class JobService {
                 .findFirst()
                 .orElseThrow(() -> new JobNotFoundException("Job is Not Found By id : " + id));
 
-        JobsPostings newJob = mapToEntity(newJobRequest);
-        validator(newJob);
-        jobRepository.save(newJob);
+        jobsPostings.setTitle(newJobRequest.getTitle());
+        jobsPostings.setJobDescription(newJobRequest.getJobDescription());
+        jobsPostings.setActive(newJobRequest.getActive());
+        jobsPostings.setJobType(newJobRequest.getJobType());
+        jobsPostings.setCompanyName(newJobRequest.getCompanyName());
+        jobsPostings.setLocation(newJobRequest.getLocation());
+        jobsPostings.setSalaryRange(newJobRequest.getSalaryRange());
+
+        validator(jobsPostings);
+        jobRepository.save(jobsPostings);
 
     }
 
