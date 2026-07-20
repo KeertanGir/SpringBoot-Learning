@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public class JobResponseDTO {
 
-    @JsonIgnore
+
     private Long id;
 
     private String title;

@@ -48,6 +48,7 @@ public class UserService {
 
     UsersResponseDto mapToDto (Users users){
         return new UsersResponseDto(
+                users.getId(),
                 users.getFullName(),
                 users.getEmail(),
                 users.getRole(),

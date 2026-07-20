@@ -25,6 +25,7 @@ public class SkillsService {
     //    Mappings
     public SkillsResponseDto mapToSkillResponseDto(Skills skill){
         return new SkillsResponseDto(
+            skill.getId(),
             skill.getSkillName()
         );
     }

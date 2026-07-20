@@ -10,16 +10,26 @@ import java.time.LocalDateTime;
 
 public class UsersResponseDto {
 
+    private Long id;
     private String fullName;
     private String email;
     private Role role;
     private LocalDateTime createdAt;
 
-    public UsersResponseDto(String fullName, String email, Role role, LocalDateTime createdAt) {
+    public UsersResponseDto(Long id, String fullName, String email, Role role, LocalDateTime createdAt) {
+        this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.role = role;
         this.createdAt = createdAt;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFullName() {

@@ -38,6 +38,7 @@ public class ApplicationService {
 
     private ApplicationResponseDto  mapToApplicationDto(Applications applications){
         return new ApplicationResponseDto(
+                applications.getId(),
                 applications.getJob_id(),
                 applications.getCandidate_id(),
                 applications.getStatus(),

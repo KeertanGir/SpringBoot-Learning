@@ -2,14 +2,24 @@ package org.learnspringframework.jobboard.dtos;
 
 public class CompanyResponseDto {
 
+    private Long id;
     private String name;
     private String description;
     private String companySite;
 
-    public CompanyResponseDto(String name, String description, String companySite) {
+    public CompanyResponseDto(Long id, String name, String description, String companySite) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.companySite = companySite;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

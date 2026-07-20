@@ -61,6 +61,7 @@ public class CompanyService {
 
     private CompanyResponseDto mapToCompanyDto(Company company){
         return new CompanyResponseDto(
+            company.getId(),
             company.getName(),
             company.getDescription(),
             company.getCompanySite()

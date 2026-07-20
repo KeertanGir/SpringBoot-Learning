@@ -8,18 +8,28 @@ import java.time.LocalDateTime;
 
 public class ApplicationResponseDto {
 
+    private Long id;
     private Long job_id;
     private Long candidate_id;
     private Status status;
     private LocalDateTime appliedDate;
     private String resumeUrl;
 
-    public ApplicationResponseDto(Long job_id, Long candidate_id, Status status, LocalDateTime appliedDate, String resumeUrl) {
+    public ApplicationResponseDto(Long id, Long job_id, Long candidate_id, Status status, LocalDateTime appliedDate, String resumeUrl) {
+        this.id = id;
         this.job_id = job_id;
         this.candidate_id = candidate_id;
         this.status = status;
         this.appliedDate = appliedDate;
         this.resumeUrl = resumeUrl;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getJob_id() {
