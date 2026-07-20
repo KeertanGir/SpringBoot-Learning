@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Create JobNotfound exceptions and ApplicationNotFoundException">
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/ApplicationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/ApplicationNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/DuplicateEmailException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/ApplicationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/ApplicationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" afterDir="false" />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Add new Application endpoints and other things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationsRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationsRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CustomizeResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/exceptions/CustomizeResponseEntityExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/SkillsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/SkillsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,9 @@
     &quot;accountId&quot;: &quot;e6461d9e-93bc-410c-8d5c-46b42852f20a&quot;
   }
 }</component>
+  <component name="JvmLoggingSettingsStorage">
+    <option name="loggerId" value="Slf4j" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -279,7 +278,9 @@
       <workItem from="1784226321954" duration="10097000" />
       <workItem from="1784287961426" duration="3718000" />
       <workItem from="1784314012970" duration="10432000" />
-      <workItem from="1784386141902" duration="5958000" />
+      <workItem from="1784386141902" duration="6029000" />
+      <workItem from="1784435998817" duration="6411000" />
+      <workItem from="1784450462379" duration="5123000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -545,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784323299675</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add new Application endpoints and other things">
+      <option name="closed" value="true" />
+      <created>1784392552398</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1784392552398</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Today I Learn About How A Springboot application have multiple Properties In an Application. To do multiple Configuration for Multiple enviroments" />
     <MESSAGE value="I learn that How The Confuguration Class Manage the Multiple Complex Configuration in An SpringBoot application and How the cobination of Configuration class With The SpringFramework Is most Powerfull for the Complex Application Configuration" />
     <MESSAGE value="Check the Actuator for the Monitoring of the Spring boot Application" />
     <MESSAGE value="I make Another home-configuration class for practice" />
@@ -588,6 +596,7 @@
     <MESSAGE value="Add security for My Apis Using Spring Security" />
     <MESSAGE value="Completed Company Entity, DTOs, Sevice, Repository, and All other Stuff for A Rest Api" />
     <MESSAGE value="Completed Users and Application Entities and Theire Response and Request Dtos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed Users and Application Entities and Theire Response and Request Dtos" />
+    <MESSAGE value="Add new Application endpoints and other things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new Application endpoints and other things" />
   </component>
 </project>

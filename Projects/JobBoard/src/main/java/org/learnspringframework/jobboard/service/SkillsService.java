@@ -78,8 +78,9 @@ public class SkillsService {
             throw new DuplicateSkillException( skillsRequestDto.getSkillName() +" skill is Already Exist");
         }
 
-        Skills savedSkills = mapToSkill(skillsRequestDto);
-        skillRepository.save(savedSkills);
+        byId.setSkillName(skillsRequestDto.getSkillName());
+
+        skillRepository.save(byId);
     }
 
     public void deleteSkill(Long id) {

@@ -6,6 +6,7 @@ import org.learnspringframework.jobboard.entities.enums.Status;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "applications")
 public class Applications {
 
     @Id
@@ -18,13 +19,14 @@ public class Applications {
     @Column(name = "candidate_id", nullable = false)
     private Long candidate_id;
 
-    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false)
     private Status status;
 
-    @Column(nullable = false)
+    @Column(name = "applied_date",nullable = false)
     private LocalDateTime appliedDate;
 
-    @Column(nullable = false)
+    @Column(name = "resume_url",nullable = false, length = 500)
     private String resumeUrl;
 
     public Applications(Long job_id, Long candidate_id, Status status, LocalDateTime appliedDate, String resumeUrl) {

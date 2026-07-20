@@ -139,3 +139,59 @@ VALUES
         'A software development company providing custom software, web development, user-interface design, DevOps, generative artificial intelligence and technology consulting services.',
         'https://www.devsinc.com'
     );
+
+INSERT INTO applications
+(job_id, candidate_id, status, applied_date, resume_url)
+VALUES
+    (1, 101, 'PENDING', '2026-07-19 09:15:00',
+     'https://example.com/resumes/candidate-101.pdf'),
+
+    (1, 102, 'SHORTLISTED', '2026-07-18 14:30:00',
+     'https://example.com/resumes/candidate-102.pdf'),
+
+    (2, 103, 'REJECTED', '2026-07-17 11:45:00',
+     'https://example.com/resumes/candidate-103.pdf'),
+
+    (2, 104, 'ACCEPTED', '2026-07-16 10:20:00',
+     'https://example.com/resumes/candidate-104.pdf'),
+
+    (3, 105, 'PENDING', '2026-07-19 08:00:00',
+     'https://example.com/resumes/candidate-105.pdf');
+
+
+INSERT INTO users (
+    full_name,
+    email,
+    password,
+    role,
+    created_at
+)
+VALUES
+    (
+        'Ahmed Khan',
+        'ahmed.recruiter@gmail.com',
+        'recruiter123',
+        'RECRUITER',
+        NOW()
+    ),
+    (
+        'Sara Malik',
+        'sara.candidate@gmail.com',
+        'candidate123',
+        'CANDIDATE',
+        NOW()
+    ),
+    (
+        'Ali Raza',
+        'ali.recruiter@gmail.com',
+        'ali123',
+        'RECRUITER',
+        NOW()
+    ),
+    (
+        'Ayesha Noor',
+        'ayesha.candidate@gmail.com',
+        'ayesha123',
+        'CANDIDATE',
+        NOW()
+    );

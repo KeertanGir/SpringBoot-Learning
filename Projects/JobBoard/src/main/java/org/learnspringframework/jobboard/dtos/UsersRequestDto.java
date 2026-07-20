@@ -1,10 +1,7 @@
 package org.learnspringframework.jobboard.dtos;
 
 import jakarta.persistence.Column;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import org.learnspringframework.jobboard.entities.enums.Role;
 
 import java.time.LocalDateTime;
@@ -23,8 +20,8 @@ public class UsersRequestDto {
     @Size(min = 6, message = "Password must be At-least 6 character")
     private String password;
 
-    @NotBlank(message = "Role is Required")
-    @Pattern(regexp = "RECRUITER|CANDIDATE", message = "Role Should be RECRUITER Or CANDIDATE")
+    @NotNull(message = "Role is Required")
+//    @Pattern(regexp = "RECRUITER|CANDIDATE", message = "Role Should be RECRUITER Or CANDIDATE")
     private Role role;
 
     private LocalDateTime createdAt;

@@ -50,8 +50,11 @@ public class CompanyService {
     public void updateCompany(Long id, @Valid CompanyRequestDto companyRequestDto) {
         Company byId = companyRepository.findById(id).orElseThrow(() ->
                 new CompanyNotFoundException("Company Not Found by id : " + id));
-        Company company = mapToCompany(companyRequestDto);
-        companyRepository.save(company);
+        byId.setName(companyRequestDto.getName());
+        byId.setCompanySite(companyRequestDto.getCompanySite());
+        byId.setDescription(companyRequestDto.getDescription());
+
+        companyRepository.save(byId);
     }
 
 
