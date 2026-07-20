@@ -1,6 +1,7 @@
 package org.learnspringframework.jobboard.dtos;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
 
@@ -15,10 +16,6 @@ public class JobRequestDto {
     @NotBlank(message = "Job Description Field is Required")
     @Size(min = 2, message = "Job Description length Should be Greater Than 2")
     private String jobDescription;
-
-    @NotBlank(message = "Company Name is Required")
-    @Size(min = 2, message = "Company name length Should be Greater Than 2")
-    private String companyName;
 
     @NotBlank(message = "Location is Required")
     @Size(min = 2, message = "Location length Should be Greater Than 2")
@@ -38,15 +35,26 @@ public class JobRequestDto {
 
     private Boolean isActive;
 
-    public JobRequestDto(String title, String jobDescription, String companyName, String location, String salaryRange, String jobType, LocalDate postedDate, Boolean isActive) {
+    @NotNull(message = "Company Id is Required")
+    private Long company_id;  // from job.getCompany().getName() / .getId()
+
+
+    @NotNull(message = "Company Id is Required")
+    private Long postedBy_id; // from job.getPostedBy().getFullName() / .getId()
+
+    private int applications_Count; // from job.getApplications().size()
+
+
+    public JobRequestDto(String title, String jobDescription, String location, String salaryRange, String jobType, LocalDate postedDate, Boolean isActive, Long company_id, Long postedBy_id) {
         this.title = title;
         this.jobDescription = jobDescription;
-        this.companyName = companyName;
         this.location = location;
         this.salaryRange = salaryRange;
         this.jobType = jobType;
         this.postedDate = postedDate;
         this.isActive = isActive;
+        this.company_id = company_id;
+        this.postedBy_id = postedBy_id;
     }
 
     public String getTitle() {
@@ -65,13 +73,7 @@ public class JobRequestDto {
         this.jobDescription = jobDescription;
     }
 
-    public String getCompanyName() {
-        return companyName;
-    }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
 
     public String getLocation() {
         return location;
@@ -111,5 +113,29 @@ public class JobRequestDto {
 
     public void setActive(Boolean active) {
         isActive = active;
+    }
+
+    public Long getCompanyId() {
+        return company_id;
+    }
+
+    public void setCompanyId(Long company_id) {
+        this.company_id = company_id;
+    }
+
+    public Long getPostedById() {
+        return postedBy_id;
+    }
+
+    public void setPostedById(Long postedBy_id) {
+        this.postedBy_id = postedBy_id;
+    }
+
+    public int getApplicationsCount() {
+        return applications_Count;
+    }
+
+    public void setApplicationsCount(int applications_Count) {
+        this.applications_Count = applications_Count;
     }
 }

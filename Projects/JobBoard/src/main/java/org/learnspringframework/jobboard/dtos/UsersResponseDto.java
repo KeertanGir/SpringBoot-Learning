@@ -16,12 +16,27 @@ public class UsersResponseDto {
     private Role role;
     private LocalDateTime createdAt;
 
-    public UsersResponseDto(Long id, String fullName, String email, Role role, LocalDateTime createdAt) {
+    private Integer postedJobsCount;
+
+    private Integer postedApplicationCount;
+
+//    public UsersResponseDto(Long id, String fullName, String email, Role role, LocalDateTime createdAt) {
+//        this.id = id;
+//        this.fullName = fullName;
+//        this.email = email;
+//        this.role = role;
+//        this.createdAt = createdAt;
+//    }
+
+
+    public UsersResponseDto(Long id, String fullName, String email, Role role, LocalDateTime createdAt, Integer postedJobsCount, Integer postedApplicationCount  ) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.role = role;
         this.createdAt = createdAt;
+        this.postedJobsCount = postedJobsCount;
+        this.postedApplicationCount = postedApplicationCount;
     }
 
     public Long getId() {
@@ -62,5 +77,21 @@ public class UsersResponseDto {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Integer getPostedJobsCount() {
+        return postedJobsCount;
+    }
+
+    public void setPostedJobsCount(Integer postedJobsCount) {
+        this.postedJobsCount = postedJobsCount;
+    }
+
+    public Integer getPostedApplicationCount() {
+        return postedApplicationCount;
+    }
+
+    public void setPostedApplicationCount(Integer postedApplicationCount) {
+        this.postedApplicationCount = postedApplicationCount;
     }
 }

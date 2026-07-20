@@ -6,12 +6,23 @@ public class CompanyResponseDto {
     private String name;
     private String description;
     private String companySite;
+    private Integer JobsCount;
 
-    public CompanyResponseDto(Long id, String name, String description, String companySite) {
+
+//    public CompanyResponseDto(Long id, String name, String description, String companySite) {
+//        this.id = id;
+//        this.name = name;
+//        this.description = description;
+//        this.companySite = companySite;
+//    }
+
+
+    public CompanyResponseDto(Long id, String name, String description, String companySite, Integer jobsCount) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.companySite = companySite;
+        JobsCount = jobsCount;
     }
 
     public Long getId() {
@@ -44,5 +55,13 @@ public class CompanyResponseDto {
 
     public void setCompanySite(String companySite) {
         this.companySite = companySite;
+    }
+
+    public Integer getJobsCount() {
+        return JobsCount;
+    }
+
+    public void setJobsCount(Integer jobsCount) {
+        JobsCount = jobsCount;
     }
 }

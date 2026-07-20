@@ -3,6 +3,10 @@ package org.learnspringframework.jobboard.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "Jobs")
@@ -10,7 +14,7 @@ public class JobsPostings {
 
 //    id           Long
 //    title        String
-//    companyName  String
+//    companyName  String ---- Changed to Real Entity
 //    location     String
 //    salaryRange  String     (e.g. "80k-120k")
 //    jobType      String     (Full-time / Part-time / Remote)
@@ -27,8 +31,6 @@ public class JobsPostings {
     @Column(name = "Job_Description" , nullable = false, length = 1000)
     private String jobDescription;
 
-    @Column(name = "Company_Name" , nullable = false)
-    private String companyName;
 
     @Column(name = "Location")
     private String location;
@@ -45,17 +47,39 @@ public class JobsPostings {
     @Column(name = "is_Active")
     private Boolean isActive;
 
+//    RelationShips
 
-    public JobsPostings(Long id, String title, String jobDescription, String companyName, String location, String salaryRange, String jobType, LocalDate postedDate, Boolean isActive) {
+    @ManyToOne
+    @JoinColumn(name = "company_Id", nullable = false)
+    private Company company;
+
+    @ManyToOne
+    @JoinColumn(name = "posted_By_id", nullable = false)
+    private Users postedBy;
+
+    @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Applications> applications = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "jobs_skills",
+            joinColumns = @JoinColumn( name = "Job_id" ),
+            inverseJoinColumns = @JoinColumn( name = "skill_id" )
+    )
+    private Set<Skills> requiredSkills = new HashSet<>();
+
+
+    public JobsPostings(Long id, String title, String jobDescription, String location, String salaryRange, String jobType, LocalDate postedDate, Boolean isActive, Company company, Users postedBy) {
         this.id = id;
         this.title = title;
         this.jobDescription = jobDescription;
-        this.companyName = companyName;
         this.location = location;
         this.salaryRange = salaryRange;
         this.jobType = jobType;
         this.postedDate = postedDate;
         this.isActive = isActive;
+        this.company = company;
+        this.postedBy = postedBy;
     }
 
     public JobsPostings() {
@@ -84,14 +108,6 @@ public class JobsPostings {
 
     public void setJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
     }
 
     public String getLocation() {
@@ -132,5 +148,37 @@ public class JobsPostings {
 
     public void setActive(Boolean active) {
         isActive = active;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public Users getPostedBy() {
+        return postedBy;
+    }
+
+    public void setPostedBy(Users postedBy) {
+        this.postedBy = postedBy;
+    }
+
+    public List<Applications> getApplications() {
+        return applications;
+    }
+
+    public void setApplications(List<Applications> applications) {
+        this.applications = applications;
+    }
+
+    public Set<Skills> getRequiredSkills() {
+        return requiredSkills;
+    }
+
+    public void setRequiredSkills(Set<Skills> requiredSkills) {
+        this.requiredSkills = requiredSkills;
     }
 }

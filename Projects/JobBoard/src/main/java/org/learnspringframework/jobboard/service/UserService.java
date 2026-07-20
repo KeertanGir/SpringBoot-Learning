@@ -52,7 +52,9 @@ public class UserService {
                 users.getFullName(),
                 users.getEmail(),
                 users.getRole(),
-                users.getCreatedAt()
+                users.getCreatedAt(),
+                users.getPostedJobs().size(),
+                users.getApplications().size()
         );
     }
 

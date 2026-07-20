@@ -2,6 +2,9 @@ package org.learnspringframework.jobboard.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "companies")
 public class Company {
@@ -19,6 +22,8 @@ public class Company {
     @Column(name = "company_site")
     private String companySite;
 
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
+    private List<JobsPostings> jobs = new ArrayList<>();
 
 
 //    Some Info about Entity Constructor
@@ -74,5 +79,14 @@ public class Company {
 
     public void setCompanySite(String companySite) {
         this.companySite = companySite;
+    }
+
+
+    public List<JobsPostings> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<JobsPostings> jobs) {
+        this.jobs = jobs;
     }
 }

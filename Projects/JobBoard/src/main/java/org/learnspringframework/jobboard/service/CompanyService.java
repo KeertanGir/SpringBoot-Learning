@@ -64,7 +64,8 @@ public class CompanyService {
             company.getId(),
             company.getName(),
             company.getDescription(),
-            company.getCompanySite()
+            company.getCompanySite(),
+            company.getJobs().size()
         );
     }
 

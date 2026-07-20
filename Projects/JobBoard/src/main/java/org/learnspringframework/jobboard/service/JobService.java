@@ -1,12 +1,19 @@
 package org.learnspringframework.jobboard.service;
 
 import jakarta.validation.Valid;
+import org.learnspringframework.jobboard.dtos.ApplicationResponseDto;
+import org.learnspringframework.jobboard.entities.Company;
 import org.learnspringframework.jobboard.entities.JobsPostings;
 import org.learnspringframework.jobboard.dtos.JobRequestDto;
 import org.learnspringframework.jobboard.dtos.JobResponseDTO;
+import org.learnspringframework.jobboard.entities.Users;
+import org.learnspringframework.jobboard.exceptions.CompanyNotFoundException;
 import org.learnspringframework.jobboard.exceptions.InvalidJobDataException;
 import org.learnspringframework.jobboard.exceptions.JobNotFoundException;
+import org.learnspringframework.jobboard.exceptions.UserNotFoundException;
+import org.learnspringframework.jobboard.repository.CompanyRepository;
 import org.learnspringframework.jobboard.repository.JobRepository;
+import org.learnspringframework.jobboard.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -21,10 +28,17 @@ public class JobService {
 
     Logger logger = LoggerFactory.getLogger(JobService.class);
     public final JobRepository jobRepository;
+    public final CompanyRepository companyRepository;
+    public final UserRepository userRepository;
+    public final ApplicationService applicationService;
 
-    public JobService(JobRepository jobRepository) {
+    public JobService(JobRepository jobRepository, CompanyRepository companyRepository, UserRepository userRepository , ApplicationService applicationService) {
         this.jobRepository = jobRepository;
+        this.companyRepository = companyRepository;
+        this.userRepository = userRepository;
+        this.applicationService = applicationService;
     }
+
 
     public JobsPostings save(JobRequestDto newJobRequest) {
         logger.debug("Creating Job -- DEBUG");
@@ -39,7 +53,14 @@ public class JobService {
             2026-07-07T21:06:34.078+05:00  INFO 1696 --- [JobBoard] [nio-8080-exec-3] o.l.j.controller.JobsPostingsController  : Creating Job --- INFO
             2026-07-07T21:06:34.078+05:00 TRACE 1696 --- [JobBoard] [nio-8080-exec-3] o.l.j.controller.JobsPostingsController  : Creating Log for job on TRACE Level
 //            * */
-        JobsPostings newJob =  mapToEntity(newJobRequest);
+
+        Company company = companyRepository.findById(newJobRequest.getCompanyId()).orElseThrow(
+                () -> new CompanyNotFoundException("Company not found with id: " + newJobRequest.getCompanyId()));
+
+        Users user = userRepository.findById(newJobRequest.getPostedById()).orElseThrow(
+                () -> new UserNotFoundException("User not found with id: " + newJobRequest.getPostedById()));
+
+        JobsPostings newJob =  mapToEntity(newJobRequest, company , user);
         validator(newJob);
         jobRepository.save(newJob);
         return newJob;
@@ -161,13 +182,21 @@ public class JobService {
                 .findFirst()
                 .orElseThrow(() -> new JobNotFoundException("Job is Not Found By id : " + id));
 
+        Company company = companyRepository.findById(newJobRequest.getPostedById()).orElseThrow(() -> new CompanyNotFoundException("Company is Not Found By id : " + newJobRequest.getPostedById()));
+        Users user = userRepository.findById(newJobRequest.getPostedById()).orElseThrow(() -> new UserNotFoundException("User is not found by : " + newJobRequest.getPostedById()));
+
+
         jobsPostings.setTitle(newJobRequest.getTitle());
         jobsPostings.setJobDescription(newJobRequest.getJobDescription());
         jobsPostings.setActive(newJobRequest.getActive());
         jobsPostings.setJobType(newJobRequest.getJobType());
-        jobsPostings.setCompanyName(newJobRequest.getCompanyName());
         jobsPostings.setLocation(newJobRequest.getLocation());
         jobsPostings.setSalaryRange(newJobRequest.getSalaryRange());
+        jobsPostings.setCompany(company);
+        jobsPostings.setPostedBy(user);
+
+//        Application is Pending to update.
+
 
         validator(jobsPostings);
         jobRepository.save(jobsPostings);
@@ -184,7 +213,7 @@ public class JobService {
 
 
     public List<JobResponseDTO> getByCompanyName(String companyName) {
-        List<JobsPostings> byCompanyName = jobRepository.findByCompanyName(companyName);
+        List<JobsPostings> byCompanyName = jobRepository.findByCompany_NameContainingIgnoreCase(companyName);
         if(byCompanyName.isEmpty()){
             throw new JobNotFoundException("There Are Not any Job Available By Company : "+ companyName);
         }
@@ -195,7 +224,7 @@ public class JobService {
     public List<JobResponseDTO> getJobsByLocationAndTypeAndCompanyName(String location, String jobType, String companyName) {
         List<JobResponseDTO> byLTC = jobRepository.findAll()
                 .stream()
-                .filter(job -> job.getLocation().equalsIgnoreCase(location) && job.getJobType().equalsIgnoreCase(jobType) && job.getCompanyName().equalsIgnoreCase(companyName))
+                .filter(job -> job.getLocation().equalsIgnoreCase(location) && job.getJobType().equalsIgnoreCase(jobType) && job.getCompany().getName().equalsIgnoreCase(companyName))
                 .map(this::mapToJobResponseDto)
                 .toList();
 
@@ -220,7 +249,7 @@ public class JobService {
                 .stream()
                 .filter(job -> job.getLocation().equalsIgnoreCase(location)
                         && job.getJobType().equalsIgnoreCase(jobType)
-                        && job.getCompanyName().equalsIgnoreCase(companyname)
+                        && job.getCompany().getName().equalsIgnoreCase(companyname)
                         && job.getTitle().equalsIgnoreCase(title) )
                 .map(this::mapToJobResponseDto)
                 .toList();
@@ -246,31 +275,40 @@ public class JobService {
 
 //    ResponseDto Mappings;
     public JobResponseDTO mapToJobResponseDto(JobsPostings job){
+        List<ApplicationResponseDto> applcationDto = job.getApplications().stream().map(applicationService::mapToApplicationDto).toList();
         return new JobResponseDTO(
                 job.getId(),
                 job.getTitle(),
                 job.getJobDescription(),
-                job.getCompanyName(),
                 job.getLocation(),
                 job.getSalaryRange(),
                 job.getJobType(),
                 job.getPostedDate(),
-                job.isActive()
-        );
+                job.isActive(),
+                job.getCompany().getId(),
+                job.getCompany().getName(),
+                job.getPostedBy().getId(),
+                job.getPostedBy().getFullName(),
+                job.getPostedBy().getEmail(),
+                job.getApplications().size(),
+                applcationDto
+                );
     }
 
 //    RequestDto Mapping
-    public JobsPostings mapToEntity(JobRequestDto job){
+    public JobsPostings mapToEntity(JobRequestDto job, Company company, Users user){
         return new JobsPostings(
-                null, // Id Automatically Generate hojae ghi
+                null,
                 job.getTitle(),
                 job.getJobDescription(),
-                job.getCompanyName(),
                 job.getLocation(),
                 job.getSalaryRange(),
                 job.getJobType(),
-                job.getPostedDate(),
-                job.getActive()
+                LocalDate.now(),
+                job.getActive(),
+                company,
+                user
+
         );
     }
 
@@ -282,7 +320,7 @@ public class JobService {
                 || (newJob.getJobDescription() == null || newJob.getJobDescription().trim().isBlank())
                 || (newJob.getLocation() == null || newJob.getLocation().trim().isBlank())
                 || (newJob.getSalaryRange() == null || newJob.getSalaryRange().trim().isBlank())
-                || (newJob.getCompanyName() == null || newJob.getCompanyName().trim().isBlank())
+                || (newJob.getCompany().getName() == null || newJob.getCompany().getName().trim().isBlank())
                 || (newJob.getPostedDate().isBefore(LocalDate.now().minusDays(7)))){
 
             if(newJob.getPostedDate().isBefore(LocalDate.now().minusDays(7))){

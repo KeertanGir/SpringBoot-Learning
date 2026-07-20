@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 import org.learnspringframework.jobboard.entities.enums.Role;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Users {
@@ -26,6 +30,22 @@ public class Users {
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
+
+    @OneToMany(mappedBy = "postedBy" , cascade = CascadeType.ALL)
+    private List<JobsPostings> postedJobs = new ArrayList<>();
+
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
+    private List<Applications> applications = new ArrayList<>();
+
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_skills",
+            joinColumns = @JoinColumn( name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "skill_id")
+    )
+    private Set<Skills> skills = new HashSet<>();
+
 
     protected Users(){}
 
@@ -83,5 +103,29 @@ public class Users {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public List<JobsPostings> getPostedJobs() {
+        return postedJobs;
+    }
+
+    public void setPostedJobs(List<JobsPostings> postedJobs) {
+        this.postedJobs = postedJobs;
+    }
+
+    public List<Applications> getApplications() {
+        return applications;
+    }
+
+    public void setApplications(List<Applications> applications) {
+        this.applications = applications;
+    }
+
+    public Set<Skills> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(Set<Skills> skills) {
+        this.skills = skills;
     }
 }

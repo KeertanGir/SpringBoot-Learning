@@ -1,197 +1,237 @@
--- Matches JobsPostings entity mappings
--- id is excluded because GenerationType.IDENTITY generates it automatically.
-
-INSERT INTO Jobs
-(Job_title, Job_Description, Company_Name, Location, Salary_Range, Job_Type, Posted_Date, is_Active)
-VALUES
-    ('Java Developer', 'Need a Java Developer with strong Data Structures and Backend knowledge of Spring Boot', 'SoftNations', 'Karachi', '40k-70k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Backend Java Developer', 'Looking for a Backend Java Developer with Spring Boot and REST API experience', 'TechNova', 'Karachi', '50k-80k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Spring Boot Developer', 'Need Spring Boot Developer with knowledge of MySQL, Hibernate, and REST APIs', 'CodeWorks', 'Lahore', '60k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Software Engineer', 'Required Java Software Engineer with OOP, problem solving, and backend development skills', 'DevHouse', 'Islamabad', '70k-120k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Junior Java Developer', 'Fresh Java Developer needed with basic knowledge of Java, JDBC, SQL, and Collections', 'SoftTech', 'Hyderabad', '35k-55k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Backend Engineer', 'Need Java Backend Engineer with Spring Boot, JPA, and RESTful services knowledge', 'NextGen Systems', 'Karachi', '80k-130k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Full Stack Java Developer', 'Looking for Full Stack Java Developer with React frontend and Spring Boot backend experience', 'WebSoft', 'Lahore', '90k-150k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Intern', 'Java Intern required with basic programming concepts, OOP, and database understanding', 'BrightCode', 'Karachi', '20k-35k', 'Internship', CURRENT_DATE, TRUE),
-    ('REST API Developer', 'Need REST API Developer with Java, Spring Boot, Postman, and JSON handling skills', 'API Solutions', 'Islamabad', '60k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Hibernate Developer', 'Required Hibernate Developer with strong ORM, entity mapping, and SQL query knowledge', 'DataSoft', 'Multan', '55k-85k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Microservices Developer', 'Need developer with Java, Spring Boot, Microservices architecture, and API gateway knowledge', 'CloudCore', 'Karachi', '100k-180k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Core Java Developer', 'Looking for Core Java Developer with strong OOP, Collections Framework, and exception handling knowledge', 'LogicWare', 'Lahore', '45k-75k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Web Developer', 'Need Java Web Developer with JSP, Servlets, MySQL, and MVC architecture knowledge', 'WebBridge', 'Faisalabad', '45k-70k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Spring MVC Developer', 'Required Spring MVC Developer with backend development and controller-service-layer experience', 'AppMakers', 'Karachi', '65k-95k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Application Developer', 'Need Java Application Developer for business software development and backend module implementation', 'BusinessSoft', 'Islamabad', '70k-110k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Backend Developer', 'Looking for Backend Developer with Java, SQL, REST APIs, and API integration knowledge', 'ServerSide Tech', 'Lahore', '60k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer Trainee', 'Java trainee required with basic DSA, OOP, database, and Git knowledge', 'CodeAcademy', 'Karachi', '25k-40k', 'Trainee', CURRENT_DATE, TRUE),
-    ('Enterprise Java Developer', 'Need Enterprise Java Developer with Spring Boot, Maven, layered architecture, and database experience', 'Enterprise Logic', 'Islamabad', '90k-160k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Cloud Developer', 'Required Java Developer with AWS basics, Spring Boot deployment, and cloud database knowledge', 'CloudSoft', 'Karachi', '100k-170k', 'Remote', CURRENT_DATE, TRUE),
-    ('Java API Integration Developer', 'Need developer for third-party API integration using Java, Spring Boot, and JSON parsing', 'IntegrateX', 'Lahore', '70k-120k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Database Developer', 'Looking for Java Developer with strong SQL, JDBC, database design, and query optimization skills', 'DB Experts', 'Hyderabad', '50k-85k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Spring Security Developer', 'Need developer with Java, Spring Security, JWT authentication, and role-based authorization knowledge', 'SecureApps', 'Karachi', '90k-140k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java E-Commerce Developer', 'Required Java Developer for e-commerce backend using Spring Boot, payment APIs, and MySQL', 'ShopTech', 'Lahore', '80k-130k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer', 'Need Java Developer with knowledge of Git, Maven, REST APIs, and basic Spring Boot', 'TechStack', 'Islamabad', '55k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Backend Intern', 'Backend intern required with Java, Spring Boot basics, MySQL, and REST API understanding', 'InternSoft', 'Karachi', '20k-30k', 'Internship', CURRENT_DATE, TRUE),
-    ('Spring Boot REST Developer', 'Need REST Developer with Spring Boot, JPA, validation, and exception handling knowledge', 'Restify Tech', 'Lahore', '65k-105k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java FinTech Developer', 'Required Java Developer for financial application backend development and secure transaction modules', 'FinSoft', 'Karachi', '100k-180k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer Remote', 'Looking for remote Java Developer with Spring Boot, PostgreSQL, and GitHub workflow experience', 'RemoteCode', 'Remote', '70k-120k', 'Remote', CURRENT_DATE, TRUE),
-    ('Java Support Developer', 'Need Java Support Developer for bug fixing, backend maintenance, and production issue handling', 'SupportSoft', 'Islamabad', '45k-70k', 'Part-time', CURRENT_DATE, TRUE),
-    ('Java QA Automation Engineer', 'Need QA Automation Engineer with Java, Selenium, testing concepts, and automation scripts knowledge', 'QualityTech', 'Lahore', '60k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Android Java Developer', 'Required Android Developer with Java, Firebase, API integration, and mobile UI knowledge', 'MobileMinds', 'Karachi', '50k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Desktop App Developer', 'Need Java Developer with Swing, JavaFX, file handling, and database connectivity knowledge', 'DesktopSoft', 'Faisalabad', '45k-75k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Banking Software Developer', 'Looking for Java Developer for banking application modules, secure APIs, and transaction handling', 'BankSoft', 'Karachi', '120k-200k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer Fresh Graduate', 'Fresh graduate required with Java, OOP, basic DSA, and database concepts', 'FreshTech', 'Lahore', '30k-50k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java System Developer', 'Need Java System Developer with multithreading, file handling, and backend logic knowledge', 'SystemSoft', 'Islamabad', '70k-110k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer with Docker', 'Required Java Developer with Spring Boot, Docker basics, and deployment knowledge', 'ContainerTech', 'Karachi', '90k-150k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java CRM Developer', 'Need Java Developer to work on CRM backend modules, customer records, and reporting APIs', 'CRM Solutions', 'Lahore', '65k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java ERP Developer', 'Looking for Java Developer with ERP system, database workflow, and business module knowledge', 'ERPSoft', 'Karachi', '80k-140k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer Night Shift', 'Need Java Backend Developer for night shift support, backend development, and bug fixing', 'NightCode', 'Remote', '60k-95k', 'Remote', CURRENT_DATE, TRUE),
-    ('Spring Boot Junior Engineer', 'Required Junior Engineer with Spring Boot, REST API, MySQL, and validation knowledge', 'BootLabs', 'Islamabad', '50k-80k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Healthcare Developer', 'Need Java Developer for healthcare management software, patient records, and secure APIs', 'MediSoft', 'Karachi', '90k-160k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Education App Developer', 'Looking for Java Developer for LMS backend, student records, and course management APIs', 'EduTech', 'Lahore', '70k-120k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Logistics Developer', 'Need Java Developer for logistics, shipment tracking, inventory flow, and reporting backend', 'ShipTech', 'Karachi', '80k-130k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer with PostgreSQL', 'Required Java Developer with PostgreSQL, Spring Data JPA, and query optimization knowledge', 'PostgresSoft', 'Islamabad', '75k-125k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Security Engineer', 'Need Java Security Engineer with authentication, authorization, JWT, and secure coding skills', 'CyberApps', 'Lahore', '110k-190k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer with React', 'Looking for Java Developer with React frontend, Spring Boot backend, and REST API integration experience', 'FullStack Labs', 'Karachi', '90k-150k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Developer Part Time', 'Need part-time Java Developer for backend tasks, small API features, and bug fixing', 'PartTimeSoft', 'Remote', '30k-60k', 'Part-time', CURRENT_DATE, TRUE),
-    ('Java Developer for Startup', 'Startup needs Java Developer with fast learning, problem solving, and Spring Boot basics', 'StartupHub', 'Karachi', '50k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Java Product Developer', 'Required Java Product Developer to build scalable SaaS backend modules and REST APIs', 'SaaSWorks', 'Lahore', '100k-170k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Senior Java Developer', 'Need Senior Java Developer with Spring Boot, Microservices, system design, and database optimization knowledge', 'MegaSoft', 'Islamabad', '180k-300k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Human Resources Manager', 'Manage recruitment, employee relations, performance reviews, HR policies, and organizational development.', 'PeopleFirst Pakistan', 'Karachi', '100k-180k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Talent Acquisition Specialist', 'Source, screen, and interview candidates while coordinating hiring activities with department managers.', 'HireBridge', 'Lahore', '60k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('HR Intern', 'Assist with employee records, interview scheduling, onboarding documents, and general HR administration.', 'CareerLaunch', 'Karachi', '20k-30k', 'Internship', CURRENT_DATE, TRUE),
-    ('Senior Accountant', 'Prepare financial statements, manage ledgers, reconcile accounts, and support monthly and annual closing.', 'LedgerPro', 'Islamabad', '90k-150k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Financial Analyst', 'Analyze budgets, financial performance, forecasts, and business trends to support management decisions.', 'Capital Insights', 'Karachi', '80k-140k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Accounts Assistant', 'Handle invoices, vouchers, petty cash, bank reconciliation, and daily accounting records.', 'Accurate Books', 'Hyderabad', '35k-55k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Digital Marketing Executive', 'Plan social media campaigns, manage paid advertisements, analyze engagement, and improve online reach.', 'MarketPulse', 'Lahore', '50k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('SEO Specialist', 'Perform keyword research, on-page optimization, technical SEO audits, and backlink strategy development.', 'SearchCraft', 'Remote', '60k-110k', 'Remote', CURRENT_DATE, TRUE),
-    ('Content Writer', 'Create website content, blogs, product descriptions, and marketing copy with strong research and editing skills.', 'ContentNest', 'Karachi', '40k-70k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Social Media Manager', 'Manage content calendars, community engagement, brand voice, and performance reporting across social platforms.', 'SocialSpark', 'Islamabad', '70k-120k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Sales Executive', 'Generate leads, present products, maintain customer relationships, and achieve monthly sales targets.', 'SalesPoint', 'Karachi', '45k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Business Development Manager', 'Identify new markets, build partnerships, prepare proposals, and drive revenue growth.', 'GrowthAxis', 'Lahore', '100k-200k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Customer Support Representative', 'Respond to customer queries through phone, email, and chat while resolving service issues professionally.', 'CareConnect', 'Karachi', '35k-60k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Call Center Agent', 'Handle inbound and outbound calls, record customer information, and resolve basic account-related concerns.', 'VoiceLine', 'Rawalpindi', '30k-55k', 'Night Shift', CURRENT_DATE, TRUE),
-    ('Operations Manager', 'Supervise daily operations, improve workflows, coordinate teams, and monitor service quality and productivity.', 'Operational Edge', 'Karachi', '120k-220k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Supply Chain Coordinator', 'Coordinate inventory, suppliers, transportation, order schedules, and supply chain reporting.', 'SupplyLink', 'Lahore', '65k-110k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Procurement Officer', 'Source vendors, request quotations, negotiate prices, prepare purchase orders, and track deliveries.', 'ProcurePlus', 'Islamabad', '60k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Warehouse Supervisor', 'Manage receiving, storage, stock counts, dispatch activities, and warehouse staff performance.', 'StoreFlow', 'Karachi', '55k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Graphic Designer', 'Design social media posts, advertisements, brand assets, packaging, and marketing materials.', 'PixelCraft Studio', 'Lahore', '50k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('UI UX Designer', 'Create user flows, wireframes, prototypes, and accessible interface designs for web and mobile products.', 'DesignOrbit', 'Remote', '80k-150k', 'Remote', CURRENT_DATE, TRUE),
-    ('Video Editor', 'Edit promotional videos, reels, interviews, and educational content using modern editing tools.', 'FrameWorks', 'Karachi', '50k-90k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Data Analyst', 'Clean datasets, write SQL queries, build dashboards, and provide actionable business insights.', 'InsightGrid', 'Islamabad', '80k-140k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Data Scientist', 'Develop predictive models, perform statistical analysis, and create machine learning solutions for business problems.', 'DataMind Labs', 'Lahore', '150k-280k', 'Full-time', CURRENT_DATE, TRUE),
-    ('DevOps Engineer', 'Manage CI/CD pipelines, containers, cloud infrastructure, monitoring, and deployment automation.', 'CloudOps Pakistan', 'Remote', '140k-260k', 'Remote', CURRENT_DATE, TRUE),
-    ('Network Administrator', 'Configure networks, troubleshoot connectivity, manage routers and switches, and monitor infrastructure security.', 'NetCore Systems', 'Karachi', '70k-120k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Cybersecurity Analyst', 'Monitor security events, investigate threats, perform vulnerability assessments, and maintain incident reports.', 'SecureShield', 'Islamabad', '120k-220k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Software QA Engineer', 'Create test cases, perform manual and automated testing, report defects, and verify software quality.', 'QualityWorks', 'Lahore', '70k-130k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Product Manager', 'Define product strategy, prioritize features, coordinate stakeholders, and track product performance.', 'ProductLane', 'Karachi', '160k-300k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Project Coordinator', 'Track project schedules, organize meetings, maintain documentation, and coordinate deliverables across teams.', 'PlanRight', 'Islamabad', '60k-100k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Civil Engineer', 'Supervise construction work, review drawings, estimate materials, and ensure compliance with project standards.', 'BuildTech Engineering', 'Karachi', '80k-150k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Mechanical Engineer', 'Support equipment design, preventive maintenance, technical documentation, and production improvement.', 'MechWorks', 'Lahore', '75k-140k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Electrical Engineer', 'Design and maintain electrical systems, troubleshoot equipment, and prepare technical reports.', 'PowerGrid Solutions', 'Faisalabad', '80k-150k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Staff Nurse', 'Provide patient care, administer medications, maintain clinical records, and support medical teams.', 'CityCare Hospital', 'Karachi', '55k-95k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Physiotherapist', 'Assess patients, develop rehabilitation plans, perform therapeutic exercises, and document clinical progress.', 'ActiveLife Clinic', 'Lahore', '60k-110k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Medical Officer', 'Examine patients, diagnose common conditions, prescribe treatment, and maintain medical documentation.', 'HealthFirst Medical Centre', 'Islamabad', '120k-220k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Pharmacist', 'Dispense medicines, verify prescriptions, counsel patients, and maintain pharmacy inventory and records.', 'MediPlus Pharmacy', 'Karachi', '65k-120k', 'Full-time', CURRENT_DATE, TRUE),
-    ('School Teacher', 'Plan lessons, teach assigned subjects, assess student performance, and maintain classroom discipline.', 'Bright Future School', 'Hyderabad', '40k-75k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Academic Coordinator', 'Coordinate curriculum delivery, teacher schedules, assessments, and academic quality standards.', 'Learning Bridge', 'Karachi', '70k-120k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Legal Advisor', 'Review contracts, provide legal guidance, manage compliance matters, and support dispute resolution.', 'LegalPoint Consultants', 'Islamabad', '120k-230k', 'Full-time', CURRENT_DATE, TRUE),
-    ('Administrative Officer', 'Manage office records, correspondence, supplies, schedules, and coordination between departments.', 'AdminWorks', 'Karachi', '45k-80k', 'Full-time', CURRENT_DATE, TRUE);
-
-
-INSERT INTO skill (skill_name)
-VALUES
-    ('Java'),
-    ('Spring Boot'),
-    ('MySQL'),
-    ('REST API'),
-    ('Hibernate'),
-    ('Git'),
-    ('Docker');
-
-
-INSERT INTO companies (name, description, company_site)
+INSERT INTO companies
+(name, description, company_site)
 VALUES
     (
         'Systems Limited',
-        'A technology and business solutions company providing digital transformation, cloud, data, enterprise applications and business process outsourcing services.',
+        'Software development and IT consulting company.',
         'https://www.systemsltd.com'
     ),
     (
-        'NETSOL Technologies',
-        'An enterprise software company specializing in asset finance, leasing, digital retail, loan servicing and financial technology solutions.',
-        'https://www.netsoltech.com'
-    ),
-    (
-        '10Pearls',
-        'A software development and digital transformation company providing artificial intelligence, product development, cloud, cybersecurity and enterprise technology services.',
-        'https://10pearls.com'
-    ),
-    (
-        'Arbisoft',
-        'A software and product development company providing custom software development, web and mobile applications, data engineering, artificial intelligence and quality assurance services.',
-        'https://arbisoft.com'
+        'Techlogix',
+        'Technology consulting and software solutions company.',
+        'https://www.techlogix.com'
     ),
     (
         'Contour Software',
-        'A software services organization supporting international software businesses through software development, quality assurance, customer support and enterprise technology teams.',
-        'https://contour-software.com'
-    ),
-    (
-        'Devsinc',
-        'A software development company providing custom software, web development, user-interface design, DevOps, generative artificial intelligence and technology consulting services.',
-        'https://www.devsinc.com'
+        'Software development company providing enterprise solutions.',
+        'https://www.contour-software.com'
     );
 
-INSERT INTO applications
-(job_id, candidate_id, status, applied_date, resume_url)
-VALUES
-    (1, 101, 'PENDING', '2026-07-19 09:15:00',
-     'https://example.com/resumes/candidate-101.pdf'),
-
-    (1, 102, 'SHORTLISTED', '2026-07-18 14:30:00',
-     'https://example.com/resumes/candidate-102.pdf'),
-
-    (2, 103, 'REJECTED', '2026-07-17 11:45:00',
-     'https://example.com/resumes/candidate-103.pdf'),
-
-    (2, 104, 'ACCEPTED', '2026-07-16 10:20:00',
-     'https://example.com/resumes/candidate-104.pdf'),
-
-    (3, 105, 'PENDING', '2026-07-19 08:00:00',
-     'https://example.com/resumes/candidate-105.pdf');
-
-
-INSERT INTO users (
-    full_name,
-    email,
-    password,
-    role,
-    created_at
-)
+INSERT INTO users
+(full_name, email, password, role, created_at)
 VALUES
     (
         'Ahmed Khan',
-        'ahmed.recruiter@gmail.com',
-        'recruiter123',
+        'ahmed.recruiter@example.com',
+        'password123',
         'RECRUITER',
-        NOW()
+        CURRENT_TIMESTAMP
     ),
     (
-        'Sara Malik',
-        'sara.candidate@gmail.com',
-        'candidate123',
-        'CANDIDATE',
-        NOW()
+        'Sara Ali',
+        'sara.recruiter@example.com',
+        'password123',
+        'RECRUITER',
+        CURRENT_TIMESTAMP
     ),
     (
         'Ali Raza',
-        'ali.recruiter@gmail.com',
-        'ali123',
-        'RECRUITER',
-        NOW()
+        'ali.candidate@example.com',
+        'password123',
+        'CANDIDATE',
+        CURRENT_TIMESTAMP
     ),
     (
-        'Ayesha Noor',
-        'ayesha.candidate@gmail.com',
-        'ayesha123',
+        'Fatima Noor',
+        'fatima.candidate@example.com',
+        'password123',
         'CANDIDATE',
-        NOW()
+        CURRENT_TIMESTAMP
+    ),
+    (
+        'Hamza Ahmed',
+        'hamza.candidate@example.com',
+        'password123',
+        'CANDIDATE',
+        CURRENT_TIMESTAMP
+    );
+
+SET @systems_company_id = (
+    SELECT id
+    FROM companies
+    WHERE name = 'Systems Limited'
+    LIMIT 1
+);
+
+SET @techlogix_company_id = (
+    SELECT id
+    FROM companies
+    WHERE name = 'Techlogix'
+    LIMIT 1
+);
+
+SET @contour_company_id = (
+    SELECT id
+    FROM companies
+    WHERE name = 'Contour Software'
+    LIMIT 1
+);
+
+SET @ahmed_recruiter_id = (
+    SELECT id
+    FROM users
+    WHERE email = 'ahmed.recruiter@example.com'
+    LIMIT 1
+);
+
+SET @sara_recruiter_id = (
+    SELECT id
+    FROM users
+    WHERE email = 'sara.recruiter@example.com'
+    LIMIT 1
+);
+
+INSERT INTO `Jobs`
+(
+    `Job_title`,
+    `Job_Description`,
+    `Location`,
+    `Salary_Range`,
+    `Job_Type`,
+    `Posted_Date`,
+    `is_Active`,
+    `company_Id`,
+    `posted_By_id`
+)
+VALUES
+    (
+        'Java Spring Boot Developer',
+        'Develop and maintain REST APIs using Java, Spring Boot, Hibernate and MySQL.',
+        'Karachi',
+        'PKR 120,000 - 180,000',
+        'Full-time',
+        CURRENT_DATE,
+        1,
+        @systems_company_id,
+        @ahmed_recruiter_id
+    ),
+    (
+        'Frontend React Developer',
+        'Build responsive web applications using React, JavaScript, HTML and CSS.',
+        'Lahore',
+        'PKR 100,000 - 150,000',
+        'Full-time',
+        CURRENT_DATE,
+        1,
+        @techlogix_company_id,
+        @sara_recruiter_id
+    ),
+    (
+        'Backend Developer Intern',
+        'Assist in backend application development using Java, Spring Boot and SQL.',
+        'Remote',
+        'PKR 40,000 - 60,000',
+        'Internship',
+        CURRENT_DATE,
+        1,
+        @contour_company_id,
+        @ahmed_recruiter_id
+    ),
+    (
+        'Database Administrator',
+        'Manage MySQL databases, backups, indexing, security and query optimization.',
+        'Islamabad',
+        'PKR 130,000 - 200,000',
+        'Full-time',
+        CURRENT_DATE,
+        1,
+        @systems_company_id,
+        @ahmed_recruiter_id
+    );
+
+SET @java_job_id = (
+    SELECT id
+    FROM `Jobs`
+    WHERE `Job_title` = 'Java Spring Boot Developer'
+    LIMIT 1
+);
+
+SET @react_job_id = (
+    SELECT id
+    FROM `Jobs`
+    WHERE `Job_title` = 'Frontend React Developer'
+    LIMIT 1
+);
+
+SET @intern_job_id = (
+    SELECT id
+    FROM `Jobs`
+    WHERE `Job_title` = 'Backend Developer Intern'
+    LIMIT 1
+);
+
+SET @database_job_id = (
+    SELECT id
+    FROM `Jobs`
+    WHERE `Job_title` = 'Database Administrator'
+    LIMIT 1
+);
+
+SET @ali_candidate_id = (
+    SELECT id
+    FROM users
+    WHERE email = 'ali.candidate@example.com'
+    LIMIT 1
+);
+
+SET @fatima_candidate_id = (
+    SELECT id
+    FROM users
+    WHERE email = 'fatima.candidate@example.com'
+    LIMIT 1
+);
+
+SET @hamza_candidate_id = (
+    SELECT id
+    FROM users
+    WHERE email = 'hamza.candidate@example.com'
+    LIMIT 1
+);
+
+INSERT INTO applications
+(
+    status,
+    applied_date,
+    resume_url,
+    job_id,
+    candidate_id
+)
+VALUES
+    (
+        'PENDING',
+        CURRENT_TIMESTAMP,
+        'https://example.com/resumes/ali-raza.pdf',
+        @java_job_id,
+        @ali_candidate_id
+    ),
+    (
+        'SHORTLISTED',
+        CURRENT_TIMESTAMP,
+        'https://example.com/resumes/fatima-noor.pdf',
+        @react_job_id,
+        @fatima_candidate_id
+    ),
+    (
+        'PENDING',
+        CURRENT_TIMESTAMP,
+        'https://example.com/resumes/hamza-ahmed.pdf',
+        @intern_job_id,
+        @hamza_candidate_id
+    ),
+    (
+        'REJECTED',
+        CURRENT_TIMESTAMP,
+        'https://example.com/resumes/ali-raza.pdf',
+        @database_job_id,
+        @ali_candidate_id
     );
