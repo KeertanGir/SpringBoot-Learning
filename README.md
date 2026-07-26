@@ -1,4 +1,4 @@
-# 🚀 Spring Boot Learning Repository
+8# 🚀 Spring Boot Learning Repository
 
 <p align="center">
   A collection of Java and Spring Boot projects built while exploring backend development concepts.
@@ -42,6 +42,7 @@ SpringBoot-Learning/
 ├── JPA-Hibernate/
 ├── GameRunner/
 ├── Spring API Starter/
+├── Spring-security/
 └── Other Experimental Projects
 ```
 
