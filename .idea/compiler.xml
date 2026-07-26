@@ -13,6 +13,7 @@
         <module name="HibernateCURD" />
         <module name="springbootapplication" />
         <module name="restfull-web-services" />
+        <module name="spring-security" />
         <module name="store" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="JobBoard" options="-parameters" />
       <module name="jpa-and-hibernate-application" options="-parameters" />
       <module name="restfull-web-services" options="-parameters" />
+      <module name="spring-security" options="-parameters" />
       <module name="springbootapplication" options="-parameters" />
       <module name="store" options="-parameters" />
     </option>

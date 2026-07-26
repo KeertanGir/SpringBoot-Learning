@@ -4,26 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Add id to the Response DTO's">
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/sql quesries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Stablished All The mappings Between the all tables">
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/controller/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/csrf/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/csrf/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/ApplicationResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/CompanyResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/CompanyResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/UsersResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Applications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/JobsPostings.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/JobsPostings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Skills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/JobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/JobRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/ApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +95,7 @@
     &quot;Spring Boot.JobBoardApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.JpaAndHibernateApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.RestfullWebServicesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SpringSecurityApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SpringbootapplicationApplication.executor&quot;: &quot;Run&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
@@ -182,6 +172,7 @@
               <entry key="GameRunnerApplication" value="STOPPED" />
               <entry key="JobBoardApplication" value="STOPPED" />
               <entry key="RestfullWebServicesApplication" value="STOPPED" />
+              <entry key="SpringSecurityApplication" value="STOPPED" />
               <entry key="SpringbootapplicationApplication" value="FAILED" />
             </map>
           </value>
@@ -189,7 +180,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.JobBoardApplication">
+  <component name="RunManager" selected="Spring Boot.SpringSecurityApplication">
     <configuration name="GameRunnerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="GameRunner" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.learnspringframework.gamerunner.GameRunnerApplication" />
@@ -220,6 +211,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="spring-security" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.learnspringframework.springsecurity.SpringSecurityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootapplicationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="springbootapplication" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.learnspringframework.springbootapplication.SpringbootapplicationApplication" />
@@ -228,6 +227,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.SpringSecurityApplication" />
       <item itemvalue="Spring Boot.JpaAndHibernateApplication" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.GameRunnerApplication" />
@@ -291,7 +291,10 @@
       <workItem from="1784435998817" duration="6411000" />
       <workItem from="1784450462379" duration="5123000" />
       <workItem from="1784538663579" duration="4952000" />
-      <workItem from="1784553929839" duration="16445000" />
+      <workItem from="1784553929839" duration="16737000" />
+      <workItem from="1784716194516" duration="4377000" />
+      <workItem from="1784875468575" duration="5425000" />
+      <workItem from="1785086046956" duration="2013000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -581,7 +584,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784539206780</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Stablished All The mappings Between the all tables">
+      <option name="closed" value="true" />
+      <created>1784571135984</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1784571135985</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +610,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="I make Another home-configuration class for practice" />
     <MESSAGE value="I Started Learning REST API with Spring boot For my Springboot To microservices journey" />
     <MESSAGE value="Make Simple REST End points of Users" />
     <MESSAGE value="I create a Rest API To Get and Post some Request" />
@@ -624,6 +634,7 @@
     <MESSAGE value="Add new Application endpoints and other things" />
     <MESSAGE value="Solve some Logical Mistakes in Services and Controller" />
     <MESSAGE value="Add id to the Response DTO's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add id to the Response DTO's" />
+    <MESSAGE value="Stablished All The mappings Between the all tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stablished All The mappings Between the all tables" />
   </component>
 </project>
