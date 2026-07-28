@@ -1,4 +1,4 @@
-8# 🚀 Spring Boot Learning Repository
+🚀 Spring Boot Learning Repository
 
 <p align="center">
   A collection of Java and Spring Boot projects built while exploring backend development concepts.
