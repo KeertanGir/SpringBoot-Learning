@@ -12,14 +12,14 @@ CREATE TABLE addresses
 CREATE TABLE categories
 (
     id   TINYINT AUTO_INCREMENT NOT NULL,
-    name VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
     CONSTRAINT `PRIMARY` PRIMARY KEY (id)
 );
 
 CREATE TABLE products
 (
     id            BIGINT AUTO_INCREMENT NOT NULL,
-    name          VARCHAR(255)   NOT NULL,
+    username          VARCHAR(255)   NOT NULL,
     price         DECIMAL(10, 2) NOT NULL,
     `description` LONGTEXT       NOT NULL,
     category_id   TINYINT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE profiles
 CREATE TABLE users
 (
     id       BIGINT AUTO_INCREMENT NOT NULL,
-    name     VARCHAR(255) NOT NULL,
+    username     VARCHAR(255) NOT NULL,
     email    VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     CONSTRAINT `PRIMARY` PRIMARY KEY (id)

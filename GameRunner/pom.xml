@@ -11,7 +11,7 @@
     <groupId>org.learn-spring-framework</groupId>
     <artifactId>GameRunner</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>GameRunner</name>
+    <username>GameRunner</username>
     <description>GameRunner</description>
     <url/>
     <licenses>

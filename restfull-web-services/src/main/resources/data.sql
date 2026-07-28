@@ -1,4 +1,4 @@
-INSERT INTO users(name, birthdate) VALUES ('Keertan', '2004-06-19'),
+INSERT INTO users(username, birthdate) VALUES ('Keertan', '2004-06-19'),
                                        ('Palak', '2007-02-02'),
                                        ('Ayesha', '2003-09-15'),
                                        ('Ali', '2002-12-08'),

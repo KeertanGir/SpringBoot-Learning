@@ -107,7 +107,7 @@ VALUES
     ('Docker');
 
 
-INSERT INTO companies (name, description, company_site)
+INSERT INTO companies (username, description, company_site)
 VALUES
     (
         'Systems Limited',

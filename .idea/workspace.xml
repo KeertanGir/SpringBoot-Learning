@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Stablished All The mappings Between the all tables">
-      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/controller/Home.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/csrf/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/csrf/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Start Spring Security and Implements the Security Practice for the API. Like Session ,CSRF Token.">
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/config/SpringSecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/model/UserPrinciples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/service/MyUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameRunner/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/GameRunner/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameRunner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameRunner/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameRunner/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GameRunner/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/sql quesries" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/sql quesries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/Student and Certificate Management System/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/Student and Certificate Management System/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restfull-web-services/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/restfull-web-services/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-api-starter-main/.run/Application.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-api-starter-main/.run/Application.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-api-starter-main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-api-starter-main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-api-starter-main/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/spring-api-starter-main/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-api-starter-main/src/main/resources/db/migration/V1__initial_migration.sql" beforeDir="false" afterPath="$PROJECT_DIR$/spring-api-starter-main/src/main/resources/db/migration/V1__initial_migration.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-api-starter-main/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-api-starter-main/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/csrf/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/csrf/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springbootapplication/src/main/resources/application-prod.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +165,6 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <set>
-              <option value="Application" />
               <option value="GameRunnerApplication" />
               <option value="JobBoardApplication" />
               <option value="RestfullWebServicesApplication" />
@@ -168,7 +179,6 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="Application" value="FAILED" />
               <entry key="GameRunnerApplication" value="STOPPED" />
               <entry key="JobBoardApplication" value="STOPPED" />
               <entry key="RestfullWebServicesApplication" value="STOPPED" />
@@ -226,10 +236,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="store" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codewithkeertan.store.StoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Spring Boot.StoreApplication" />
       <item itemvalue="Spring Boot.SpringSecurityApplication" />
       <item itemvalue="Spring Boot.JpaAndHibernateApplication" />
-      <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.GameRunnerApplication" />
       <item itemvalue="Spring Boot.JobBoardApplication" />
       <item itemvalue="Spring Boot.RestfullWebServicesApplication" />
@@ -294,7 +311,8 @@
       <workItem from="1784553929839" duration="16737000" />
       <workItem from="1784716194516" duration="4377000" />
       <workItem from="1784875468575" duration="5425000" />
-      <workItem from="1785086046956" duration="2013000" />
+      <workItem from="1785086046956" duration="3068000" />
+      <workItem from="1785234588655" duration="6210000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -592,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784571135985</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Start Spring Security and Implements the Security Practice for the API. Like Session ,CSRF Token.">
+      <option name="closed" value="true" />
+      <created>1785088168457</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1785088168457</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +636,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="I Started Learning REST API with Spring boot For my Springboot To microservices journey" />
     <MESSAGE value="Make Simple REST End points of Users" />
     <MESSAGE value="I create a Rest API To Get and Post some Request" />
     <MESSAGE value="Perform Exception Handling on the Rest Endpoints" />
@@ -635,6 +660,7 @@
     <MESSAGE value="Solve some Logical Mistakes in Services and Controller" />
     <MESSAGE value="Add id to the Response DTO's" />
     <MESSAGE value="Stablished All The mappings Between the all tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stablished All The mappings Between the all tables" />
+    <MESSAGE value="Start Spring Security and Implements the Security Practice for the API. Like Session ,CSRF Token." />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Spring Security and Implements the Security Practice for the API. Like Session ,CSRF Token." />
   </component>
 </project>
