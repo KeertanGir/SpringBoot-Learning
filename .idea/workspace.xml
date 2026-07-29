@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="change Security from default to mannual, what i want that type for filter chain and and user Authenticarion provider. for the Authentication.">
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/entities/UserPrinciples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/CustomUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/dtos/JobResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Added Role base access and also Loging by the real Db Data." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,7 +293,7 @@
       <workItem from="1785086046956" duration="3068000" />
       <workItem from="1785234588655" duration="8680000" />
       <workItem from="1785307922021" duration="10806000" />
-      <workItem from="1785319305349" duration="627000" />
+      <workItem from="1785319305349" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -616,7 +607,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785243461054</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Added Role base access and also Loging by the real Db Data.">
+      <option name="closed" value="true" />
+      <created>1785320048582</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1785320048582</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +633,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="I create a Rest API To Get and Post some Request" />
     <MESSAGE value="Perform Exception Handling on the Rest Endpoints" />
     <MESSAGE value="Start a Backend Project named Job Boards shows The jobs and Take Respons- Started only 2 things Jobs Can be Showed and Added New Jobs also. But now its On only inMemory database. Using ArrayList" />
     <MESSAGE value="Add a New Funtionality that Can enable search from High to low salary" />
@@ -659,6 +657,7 @@
     <MESSAGE value="Stablished All The mappings Between the all tables" />
     <MESSAGE value="Start Spring Security and Implements the Security Practice for the API. Like Session ,CSRF Token." />
     <MESSAGE value="change Security from default to mannual, what i want that type for filter chain and and user Authenticarion provider. for the Authentication." />
-    <option name="LAST_COMMIT_MESSAGE" value="change Security from default to mannual, what i want that type for filter chain and and user Authenticarion provider. for the Authentication." />
+    <MESSAGE value="Added Role base access and also Loging by the real Db Data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Role base access and also Loging by the real Db Data." />
   </component>
 </project>
