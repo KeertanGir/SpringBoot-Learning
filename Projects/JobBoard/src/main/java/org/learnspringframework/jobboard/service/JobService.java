@@ -275,7 +275,7 @@ public class JobService {
 
 //    ResponseDto Mappings;
     public JobResponseDTO mapToJobResponseDto(JobsPostings job){
-        List<ApplicationResponseDto> applcationDto = job.getApplications().stream().map(applicationService::mapToApplicationDto).toList();
+//        List<ApplicationResponseDto> applcationDto = job.getApplications().stream().map(applicationService::mapToApplicationDto).toList();
         return new JobResponseDTO(
                 job.getId(),
                 job.getTitle(),
@@ -290,8 +290,7 @@ public class JobService {
                 job.getPostedBy().getId(),
                 job.getPostedBy().getFullName(),
                 job.getPostedBy().getEmail(),
-                job.getApplications().size(),
-                applcationDto
+                job.getApplications().size()
                 );
     }
 

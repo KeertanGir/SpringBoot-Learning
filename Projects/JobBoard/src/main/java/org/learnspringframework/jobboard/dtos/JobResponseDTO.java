@@ -30,7 +30,7 @@ public class JobResponseDTO {
     private Integer totalApplications;
 
 //    @JsonIgnore
-    private List<ApplicationResponseDto> applications;
+//    private List<ApplicationResponseDto> applications;
 
     // Default Constructor
     public JobResponseDTO() {
@@ -39,7 +39,7 @@ public class JobResponseDTO {
     // Parameterized Constructor
 
 
-    public JobResponseDTO(Long id, String title, String jobDescription, String location, String salaryRange, String jobType, LocalDate postedDate, Boolean isActive, Long companyId, String companyName, Long postedById, String postedByName, String postedByEmail, Integer totalApplications , List<ApplicationResponseDto> applications) {
+    public JobResponseDTO(Long id, String title, String jobDescription, String location, String salaryRange, String jobType, LocalDate postedDate, Boolean isActive, Long companyId, String companyName, Long postedById, String postedByName, String postedByEmail, Integer totalApplications ) {
         this.id = id;
         this.title = title;
         this.jobDescription = jobDescription;
@@ -54,16 +54,16 @@ public class JobResponseDTO {
         this.postedByName = postedByName;
         this.postedByEmail = postedByEmail;
         this.totalApplications = totalApplications;
-        this.applications = applications;
+
     }
 
-    public List<ApplicationResponseDto> getApplications() {
-        return applications;
-    }
+//    public List<ApplicationResponseDto> getApplications() {
+//        return applications;
+//    }
 
-    public void setApplications(List<ApplicationResponseDto> applications) {
-        this.applications = applications;
-    }
+//    public void setApplications(List<ApplicationResponseDto> applications) {
+//        this.applications = applications;
+//    }
 
     public Long getId() {
         return id;

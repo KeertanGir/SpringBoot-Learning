@@ -9,6 +9,8 @@ import org.learnspringframework.jobboard.exceptions.UserNotFoundException;
 import org.learnspringframework.jobboard.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,8 +19,11 @@ import java.util.List;
 public class UserService {
 
 
-    private final UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
+
+    private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -30,7 +35,9 @@ public class UserService {
         if(exists){
             throw new DuplicateEmailException("this Email "+ usersRequestDto.getEmail() +"  Already Exits, try new Email");
         }
+
         Users users = mapToEntity(usersRequestDto);
+//        users.setPassword(passwordEncoder.encode(usersRequestDto.getPassword()));
         userRepository.save(users);
 
         return users;
@@ -40,7 +47,7 @@ public class UserService {
         return new Users(
                 usersRequestDto.getFullName(),
                 usersRequestDto.getEmail(),
-                usersRequestDto.getPassword(),
+                passwordEncoder.encode(usersRequestDto.getPassword()),
                 usersRequestDto.getRole(),
                 usersRequestDto.getCreatedAt()
         );
