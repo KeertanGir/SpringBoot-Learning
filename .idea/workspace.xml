@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Added Role base access and also Loging by the real Db Data." />
+    <list default="true" id="f80ad0a9-c4a1-4b9b-9edb-57de63bc1601" name="Changes" comment="Added Role base access and also Loging by the real Db Data .">
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/JobBoard/src/main/java/org/learnspringframework/jobboard/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/config/SpringSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/config/SpringSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/java/org/learnspringframework/springsecurity/service/MyUserDetailsService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +176,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.JobBoardApplication">
+  <component name="RunManager" selected="Spring Boot.SpringSecurityApplication">
     <configuration name="GameRunnerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="GameRunner" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.learnspringframework.gamerunner.GameRunnerApplication" />
@@ -293,7 +300,10 @@
       <workItem from="1785086046956" duration="3068000" />
       <workItem from="1785234588655" duration="8680000" />
       <workItem from="1785307922021" duration="10806000" />
-      <workItem from="1785319305349" duration="732000" />
+      <workItem from="1785319305349" duration="1464000" />
+      <workItem from="1785396255569" duration="2998000" />
+      <workItem from="1785403697258" duration="1558000" />
+      <workItem from="1785438196700" duration="2435000" />
     </task>
     <task id="LOCAL-00001" summary="Students And Their Certificate Management System By Hibernate ORM Tool">
       <option name="closed" value="true" />
@@ -615,7 +625,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785320048582</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added Role base access and also Loging by the real Db Data .">
+      <option name="closed" value="true" />
+      <created>1785320151502</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1785320151505</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -633,7 +651,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Perform Exception Handling on the Rest Endpoints" />
     <MESSAGE value="Start a Backend Project named Job Boards shows The jobs and Take Respons- Started only 2 things Jobs Can be Showed and Added New Jobs also. But now its On only inMemory database. Using ArrayList" />
     <MESSAGE value="Add a New Funtionality that Can enable search from High to low salary" />
     <MESSAGE value="Add @CrossOrigin For allowing React application for our website" />
@@ -658,6 +675,7 @@
     <MESSAGE value="Start Spring Security and Implements the Security Practice for the API. Like Session ,CSRF Token." />
     <MESSAGE value="change Security from default to mannual, what i want that type for filter chain and and user Authenticarion provider. for the Authentication." />
     <MESSAGE value="Added Role base access and also Loging by the real Db Data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Role base access and also Loging by the real Db Data." />
+    <MESSAGE value="Added Role base access and also Loging by the real Db Data ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Role base access and also Loging by the real Db Data ." />
   </component>
 </project>

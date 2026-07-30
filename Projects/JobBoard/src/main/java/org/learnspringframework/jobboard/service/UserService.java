@@ -77,7 +77,7 @@ public class UserService {
         useByid.setFullName(usersRequestDto.getFullName());
         useByid.setEmail(usersRequestDto.getEmail());
         useByid.setRole(usersRequestDto.getRole());
-        useByid.setPassword(usersRequestDto.getPassword());
+        useByid.setPassword( passwordEncoder.encode(usersRequestDto.getPassword()));
         userRepository.save(useByid);
     }
 
